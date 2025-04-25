@@ -1,0 +1,14 @@
+intent: "Deploy my FastAPI app to AWS EC2 and run smoke tests"
+steps:
+  - provision:
+      provider: aws
+      services: ec2
+      config:
+        instance_type: t2.micro
+        region: us-west-2
+  - deploy:
+      app_type: fastapi
+      entry: main.py
+  - test:
+      type: integration
+      framework: playwright

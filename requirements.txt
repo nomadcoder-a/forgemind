@@ -1,0 +1,8 @@
+openai
+langchain
+boto3
+docker
+pytest
+selenium
+playwright
+pyyaml
